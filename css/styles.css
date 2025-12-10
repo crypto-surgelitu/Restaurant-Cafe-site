@@ -12,8 +12,21 @@ color:#6B5750;
 }
 
 header {
-  width: 100%;
-  padding-top: 20px;   /* THIS controls how high it sits */
+width:100%;
+ padding:20px; /* THIS controls how high it sits */
+ background-color: #2c2416;/* Dark brown shadow on the nav bar */
+
+
+}
+/* footer */
+footer{
+  background-color:#E8D5BF;
+  color:  #2e190a;
+  text-align:left;
+  padding: 1.5rem;
+  letter-spacing:2px;
+  font-size:20px;
+  font-weight:600;
 }
 .nav-links ul{
   display: flex;
@@ -28,26 +41,31 @@ header {
   align-items: center;
 }
 .nav-links a {
-  text-decoration: none;
+  text-decoration: none; /* remove the underline on the nav links */
   color: #4a3c33;
-  font-weight: 600;
+  font-weight: 600;     /* How thick the letters are on the nav bar */
+  cursor:pointer;
 }
 .nav-links a:hover {
   color: #a67c52;  /* lighter brown on hover */
 }
 .nav-links a:active {
-  color: #6f4e37;  /* darker brown on active */
+  color: #2e190a;  /* darker brown on active */
 }
 .nav-links a:visited{
-    color: #0a0a0a;  /* dark brown on visited */
+    color: white;  /* dark brown on visited */
 }
+
+
+
 /* order online button */
 .order-btn{
  padding: 10px 20px;
-  background: #4a3c33;
+ background: #6f4e37;
   color: white;
   border-radius: 6px;
-  border: none;
+  border:none;
+
 }
 .order-btn:hover{
   background: #a67c52;
@@ -71,9 +89,9 @@ header {
     gap :20px;
 }
 .hero-content{
-    flex:1;
-    max-width: 600px;
-    text-align:left;
+     flex:1;
+     max-width:600px;
+     text-align:left;
 }
 .hero-content h2{
     font-size:64px;
@@ -90,22 +108,22 @@ header {
     max-width:500px;
     font-weight:700;
 }
-
+/* Order now button and view menu button */
   .hero-buttons{
     display:flex;
     gap:18px; 
     } 
 .hero-buttons button{
-    padding:14px 28px;
-    font-size:16px;
+    padding: 20px 28px;
+    font-size:17px;
     font-weight:600;
-    border-radius: 10px;
-    border:none;
+    border-radius:6px;
+ border: none;
     cursor:pointer;
     transition: all 0.3s ease;
 }
 .order-now{
-    background-color:#4a3c33;
+    background-color: #2e190a;
     color:#fff;
 }
 .order-now:hover{
@@ -114,6 +132,16 @@ header {
 .view-menu:hover{
     background-color: #6f4e37;
     color:white;
+}
+.view-menu{
+ text-decoration: none;
+padding: 20px 28px;
+background:#2e190a;
+color: white;
+border-radius: 6px;
+font-weight:600;
+font-size: 17px;
+
 }
 .hero-image{
     flex:1;
@@ -129,6 +157,7 @@ header {
     display:block;
     opacity: 0.95;
     filter: drop-shadow(0 15px 10px rgba(74, 60, 51, 0.2)); /* ← Adds depth */
+    background-position: center;
 }
 .logo img{
   width:40px;
@@ -138,9 +167,156 @@ header {
 }
 .logo h1{
   font-size:24px;
+  color:#fff;
+  display:flex;
+  gap:1.4rem;
+
 }
 .logo{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:1.4rem;
+  color: #fff;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  gap: 5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+
+main {
+  min-height: calc(100vh - 120px); /* controls the height and ensures proper scaling between the .menu category and the footer */
+  padding: 4rem 0;
+}
+
+.menu-category {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.menu-container {
+  background-color: #faf8f3;
+  padding:2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* Creates illusion of floating menu by creating a shadow */
+  text-align: justify;
+  
+}
+.main-header{
+  width: fit-content; /* the element shrinks to fit the cointainer of the text */
+  margin:0 auto;      /* Centers the element */
+  text-align:center;
+  font-weight:600;
+  color:#0a0a0a;
+  font-family:'Cormorant Garamond', sans-serif;
+  text-transform: uppercase; /* Makes all letters capital */ 
+  margin-bottom: 40px;
+  border-bottom: 4px solid;
+  font-size: 2.5rem;
+}
+.menu-section{
+  margin-bottom: 15px; /* Creates Space outside the element */  
+  padding-bottom:25px; /*Creates Space inside the element allwoing each section proper spacing */
+}
+
+.item-header{
+  width: fit-content;
+  font-family:'Cormorant Garamond', sans-serif;
+  font-size: 1.5rem;
+  color:#2c2416;
+  margin-bottom: 1.2rem;/* creates space between the header and the content */
+  border-bottom:4px solid ; /*creates a line for each header */
+  letter-spacing:2px;
+  text-transform:uppercase;
+  padding-bottom:0.5rem; /*creates space inside the element giving room between the the border and the text */
+}
+.item{
+  display:flex;
+  justify-content: space-between;
+  border-bottom:1px dotted;
+  align-items: flex-start;
+  gap:2rem;
+  padding:1.5rem 0;
+  margin-bottom: 5px;
+
+}
+.item h4{
+  margin-bottom: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size:1rem;
+  font-weight:600;
+  color: #2e190a;
+
+}
+.item p{
+  line-height:1.5;
+  font-family: 'Times New Roman', Times, serif;
+  font-size:15px;
+  font-weight:700;
+  color:rgb(148, 124, 124);
+  letter-spacing: 1px;
+}
+.price{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:#0a0a0a;
+  padding-top:4rem;
+}
+.about{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  gap:40px;
+  padding:40px 20px;
+  max-width:1200px;
+  margin:0 auto;
+}
+.about h2{
+  font-size:32px;
+  font-weight:700;
+  color:#2e190a;
+  line-height: 1.2;
+  margin-bottom:16px;
+}
+.about img{
+  width:100%;
+  max-width:300px;
+  height:auto;
+  border-radius:50%;
+  object-fit:cover;
+  display:block;
+  flex-shrink:0;
+}
+.about p{
+  font-weight:300;
+  font-size:16px;
+  font-family:'Times New Roman', Times, serif;
+  line-height:1.6;
+  letter-spacing:0.5px;
+  color:#2e190a;
+  margin:0;
+}
+.about picture{
+  flex: 0 0 300px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.about .content{
+  flex: 1 1 300px;
+  min-width:300px;
+}
+.about *{
+  margin:0;
 }
